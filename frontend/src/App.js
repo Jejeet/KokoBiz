@@ -8,6 +8,12 @@ import ShopCategory from './Pages/ShopCategory';
 import Cart from './Pages/Cart';
 import Product from './Pages/Product';
 import Footer from './Components/Footer/Footer';
+import men_banner from "../src/Components/Assets 3/banner_mens.png"
+import women_banner from "../src/Components/Assets 3/banner_women.png"
+import kids_banner from "../src/Components/Assets 3/banner_kids.png"
+
+//pass each banner through props to each of the category
+
 function App() {
   return (
     <div >
@@ -16,9 +22,9 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path = '/' element = {<Shop/>} />
-        <Route path = '/men' element={<ShopCategory category = "men" />} />
-        <Route path = '/women/' element={<ShopCategory category = "women" />} />
-        <Route path = '/kids'element ={ <ShopCategory category = "Kids" />} />
+        <Route path = '/men' element={<ShopCategory banner ={men_banner} category = "men" />} />
+        <Route path = '/women/' element={<ShopCategory banner ={women_banner} category = "women" />} />
+        <Route path = '/kids'element ={ <ShopCategory banner ={kids_banner} category = "Kids" />} />
         <Route path = '/product' element={<Product/>}>
         <Route path = ':productId' element={<product/>} />
         </Route>
