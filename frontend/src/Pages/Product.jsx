@@ -1,6 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
 import { useParams } from 'react-router-dom';
+import Breadcrum from '../Components/Breadcrum/Breadcrum';
 import { ShopContext } from '../Context/ShopContext'
 
 const Product = () => {
@@ -9,8 +10,13 @@ const Product = () => {
   const {productId} = useParams();
   const product = all_product.find((e)=> e.id === Number(productId))
   return (
-    <div></div>
+    <div>
+      <Breadcrum product={product} />
+    </div>
   )
 }
 
 export default Product
+
+
+//link the item image with the product...(that is to be done on the item compo.)
