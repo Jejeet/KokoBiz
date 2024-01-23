@@ -18,3 +18,5 @@ const RelatedProducts = () => {
 }
 
 export default RelatedProducts
+
+//to be mounted in the product page
