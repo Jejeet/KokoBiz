@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { ShopContext } from '../../Context/ShopContext'
 import "./CartItems.css"
+import remove_icon from "../Assets 3/cart_cross_icon.png"
+
 
 const CartItems = () => {
   //access the data and functtin through contextAPI
@@ -17,7 +19,10 @@ const CartItems = () => {
       </div>
       <hr />
       <div>
-        <div className="classitems-format"></div>
+        <div className="classitems-format">
+          <img src="" alt="" className='carticon-product-icon'/>
+          <p></p>
+        </div>
       </div>
     </div>
   )
