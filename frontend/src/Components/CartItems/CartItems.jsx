@@ -18,12 +18,21 @@ const CartItems = () => {
         <p>Remove</p>
       </div>
       <hr />
-      <div>
+      {all_product.map((e) =>{
+        if(CartItems[e.id]>0)
+        { return   <div>
         <div className="classitems-format">
-          <img src="" alt="" className='carticon-product-icon'/>
-          <p></p>
+          <img src={e.image} alt="" className='carticon-product-icon'/>
+          <p>{e.name}</p>
+          <p>${e.new_price}</p>
+          <button className='cartitems-quantity'>{CartItems[e.id]}</button>
+          <p>{e.new_price*CartItems[e.id]}</p>
+          <img src={remove_icon} onClick={()=>{removeFromCart(e.id)}} alt="" />
         </div>
+        <hr />
       </div>
+        }
+      })}
     </div>
   )
 }
