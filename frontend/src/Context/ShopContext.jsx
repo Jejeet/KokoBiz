@@ -7,7 +7,7 @@ export const ShopContext = createContext(null);
 
 //for add to cart. using this context, we can access the add to cart data in any component
 
-const getDefaultCart = () =>{
+const getDefaultCart = () =>{ 
     let cart = {};
     for(let index = 0; index < all_product.length+1; index++){
         cart[index] = 0;
@@ -22,6 +22,7 @@ const ShopContextProvider = (props)=>{
     const addToCart = (itemId) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
     }
+    console.log(cartItems)
     
     const removeFromCart = (itemId) =>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
@@ -30,6 +31,7 @@ const ShopContextProvider = (props)=>{
     
     
     const contextValue ={all_product,cartItems,addToCart,removeFromCart};
+    
     return(
         <ShopContext.Provider value={contextValue}>
             {props.children}
