@@ -16,3 +16,21 @@
     gap: 75px;
     color: #454545;
 }
+.classitems-format{
+    font-size: 17px;
+    font-weight: 500;
+}
+.carticon-product-icon{
+    height: 62px;
+}
+.cartitems-remove-icon{
+    width: 15px;
+    margin: 0px 40px;
+    cursor: pointer;
+}
+.cartitems-quantity{
+    width: 64px;
+    height: 5opx;
+    border: 2px solid #ebebeb ;
+    background: #fff;
+}
