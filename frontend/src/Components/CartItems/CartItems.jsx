@@ -13,7 +13,7 @@ const CartItems = () => {
         <p>Products</p>
         <p>Title</p>
         <p>Price</p>
-        <p>Quntity</p>
+        <p>Quantity</p>
         <p>Total</p>
         <p>Remove</p>
       </div>
@@ -22,7 +22,7 @@ const CartItems = () => {
         if(cartItems[e.id]>0)
 {
            return <div>
-        <div className="classitems-format">
+        <div className="classitems-format cartitems-format-main">
           <img src={e.image} alt="" className='carticon-product-icon'/>
           <p>{e.name}</p>
           <p>${e.new_price}</p>
@@ -35,7 +35,7 @@ const CartItems = () => {
         } 
         else{
           return <div>
-            no item found
+          
           </div>
         }
       })}
