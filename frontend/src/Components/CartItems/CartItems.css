@@ -81,4 +81,10 @@
     font-size: 16px;
     width: 330px;
     height: 50px;
+}.cartitems-promobox button{
+    width: 170px;
+    height: 58px;
+    background: black;
+    color: white;
+    font-size: 16px;
 }
