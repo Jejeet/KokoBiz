@@ -46,13 +46,13 @@ const CartItems = () => {
             </div>
             <hr />
             <div className="cartitems-total-item">
-              <p>Shipp Fee</p>
+              <p>Shipping Fee</p>
               <p>Free</p>
             </div>
             <hr />
             <div className="cartitems-total-item">
               <h3>Total</h3>
-            <h3>${getTotalCartAmount()}</h3>
+          <h3>${getTotalCartAmount()}</h3>
             </div>
           </div>
           <button>PROCEED TO CHECKOUT</button>
