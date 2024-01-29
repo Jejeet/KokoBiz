@@ -4,10 +4,13 @@ import logo from "../Assets 3/logo.png"
 import cart_icon from "../Assets 3/cart_icon.png"
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { ShopContext } from '../../Context/ShopContext'
 
 const Navbar = () => {
   // usestate so i can move from one slide to another(page)
   const [menu, setMenu] = useState("shop");
+  const {getTotalItems}= useContext(ShopContext);
   return(
     <div className='navbar'>
         <div className="nav-logo">
@@ -31,7 +34,7 @@ const Navbar = () => {
            <Link to='/login'><button>Login</button></Link> 
            <Link to ='/cart'><img src={cart_icon} alt="" /></Link> 
             {/* to add a counter to the cart  */}
-            <div className="nav-cart-count">0</div>
+            <div className="nav-cart-count">{getTotalItems()}</div>
         </div>
 
     </div>
