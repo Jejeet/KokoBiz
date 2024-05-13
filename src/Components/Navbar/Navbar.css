@@ -71,3 +71,9 @@
     background: red;
     color: white;
 }
+.navMedia img{
+    width: 40px;
+    height: 34px;
+    padding-top: 1rem;
+    
+}

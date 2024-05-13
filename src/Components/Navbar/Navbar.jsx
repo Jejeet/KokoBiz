@@ -1,5 +1,7 @@
 import React from 'react'
 import "./Navbar.css"
+import bar from "../Assets 3/menu icon.png"
+import cross from "../Assets 3/cross icon.jpeg"
 import logo from "../Assets 3/logo.png"
 import cart_icon from "../Assets 3/cart_icon.png"
 import { useState } from 'react'
@@ -17,6 +19,7 @@ const Navbar = () => {
             <img src={logo} alt="" />
             <p>KOKO_GARB</p>
         </div>
+      
         <ul className="nav-menu"> 
         {/* add onclick to each of them and a function set to set menu*/}
         {/* the hr was fist included manually to style on shop but
@@ -36,8 +39,14 @@ const Navbar = () => {
             {/* to add a counter to the cart  */}
             <div className="nav-cart-count">{getTotalItems()}</div>
         </div>
+        
+        <div className='navMedia'>
+          <img src={bar} alt="" />
+          <img src={cross} alt="" />
+        </div>
 
     </div>
+   
   )
 }
 
