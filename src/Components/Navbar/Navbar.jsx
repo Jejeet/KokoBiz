@@ -11,6 +11,7 @@ import { ShopContext } from '../../Context/ShopContext'
 
 const Navbar = () => {
   // usestate so i can move from one slide to another(page)
+  const [showMenu, setShowMenu]= useState(true)
   const [menu, setMenu] = useState("shop");
   const {getTotalItems}= useContext(ShopContext);
   return(
@@ -39,11 +40,14 @@ const Navbar = () => {
             {/* to add a counter to the cart  */}
             <div className="nav-cart-count">{getTotalItems()}</div>
         </div>
-        
+
         <div className='navMedia'>
-          <img src={bar} alt="" />
-          <img src={cross} alt="" />
-        </div>
+        {showMenu ? (
+          <img src={bar} alt="" onClick={() => setShowMenu(false)} />
+        ) : (
+          <img src={cross} alt="" onClick={() => setShowMenu(true)} />
+        )}
+      </div>
 
     </div>
    
@@ -51,3 +55,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
