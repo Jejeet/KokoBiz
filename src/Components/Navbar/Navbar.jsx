@@ -20,6 +20,7 @@ const Navbar = () => {
             <img src={logo} alt="" />
             <p>KOKO_GARB</p>
         </div>
+       
       
         <ul className="nav-menu"> 
         {/* add onclick to each of them and a function set to set menu*/}
