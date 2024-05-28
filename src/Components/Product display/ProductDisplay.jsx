@@ -4,6 +4,7 @@ import star_icon from "../Assets 3/star_icon.png"
 import star_dull_icon from "../Assets 3/star_dull_icon.png"
 import { useContext } from 'react'
 import { ShopContext } from '../../Context/ShopContext'
+import { Star, StarOff } from 'lucide-react'
 
 const ProductDisplay = (props) => {
     const {product} = props;
@@ -27,11 +28,9 @@ const ProductDisplay = (props) => {
                 {product.name}
             </h1>
             <div className="productdisplay-right-stars">
-                <img src={star_icon} alt="" />
-                <img src={star_icon} alt="" />
-                <img src={star_icon} alt="" />
-                <img src={star_icon} alt="" />
-                <img src={star_dull_icon} alt="" />
+                {Array.from({length:4}).map((_, index)=><Star className='ratingIcon' strokeWidth={3} key={index} />
+                )}
+                <StarOff className='ratingIcon' strokeWidth={3} />
                 <p>(122)</p>
             </div>
             <div className="productdisplay-right-prices">
