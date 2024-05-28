@@ -2,37 +2,29 @@ import React from 'react'
 import { useContext } from 'react'
 import { ShopContext } from '../Context/ShopContext'
 import "./CSS/ShopCategory.css"
-import dropdown_icon from "../Components/Assets 3/dropdown_icon.png"
-import Item from "../Components/Hero/Item/Item"
-
+import {ChevronDown} from "lucide-react"
+import ProductList from '../Components/products/ProductList'
+import SectionHeader from '../Components/layouts/SectionHeader'
 
 const ShopCategory = (props) => {
   const {all_product} = useContext(ShopContext);
+  const filteredProduct = all_product.filter((item)=>{
+    if(props.category===item.category) return item
+  })
+
   return (
     <div className='shop-category'>
       {/* html structure for the shop category page */}
       <img className='shopcategory-banner' src={props.banner} alt="" />
-      <div className="shopcategory-indexSort">
+      <SectionHeader className="shopcategory-indexSort">
         <p>
           <span>Showing 1-12</span> out of 36 products 
         </p>
         <div className="shopcategory-sort">
-          Sort by <img src={dropdown_icon} alt="" />
+         <span> Sort by</span> <ChevronDown />
         </div>
-      </div>
-      <div className="shopcategory-products">
-        { all_product.map((item,i)=>{
-          if(props.category===item.category) {
-            return <Item key= {i} id ={item.id} 
-            name={item.name} image ={item.image} 
-            new_price={item.new_price} old_price={item.old_price} />
-          }
-          else{
-            return null;
-          }
-
-        })}
-      </div>
+      </SectionHeader>
+        <ProductList products={filteredProduct} className="shopcategory-products"/>
       <div className="shopcategory-loadmore">
         Explore More
       </div>
