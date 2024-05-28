@@ -1,13 +1,13 @@
 import React from 'react'
 import './Breadcrum.css'
-import arrow_icon from "../Assets 3/breadcrum_arrow.png"
+import {ChevronRight} from "lucide-react"
 const Breadcrum = (props) => {
     const {product} = props;
   return (
     <div className='breadcrum'>
-        HOME <img src={arrow_icon} alt="" />
+        HOME  <ChevronRight />
          SHOP 
-         {product.categorey} <img src={arrow_icon} alt="" />{product.name}
+         {product.categorey} <ChevronRight /> {product.name}
     </div>
   )
 }
