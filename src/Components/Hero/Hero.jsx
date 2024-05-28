@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import hand_icon from '../Assets 3/hand_icon.png'
 import "./Hero.css"
-import arrow_icon from '../Assets 3/arrow.png'
+import {MoveRight} from "lucide-react"
 import hero_image from '../Assets 3/hero_image.png'
 const Hero = () => {
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
             </div>
             <div className="hero-latest-btn">
                 <div>Latest Collection</div>
-                <img src={arrow_icon} alt="" />
+                <MoveRight />
             </div>
 
         </div>
