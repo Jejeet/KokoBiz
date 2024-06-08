@@ -1,7 +1,6 @@
 import React from 'react'
 import "./ProductDisplay.css"
-import star_icon from "../Assets 3/star_icon.png"
-import star_dull_icon from "../Assets 3/star_dull_icon.png"
+
 import { useContext } from 'react'
 import { ShopContext } from '../../Context/ShopContext'
 import { Star, StarOff } from 'lucide-react'
