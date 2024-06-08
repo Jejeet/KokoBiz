@@ -8,9 +8,7 @@ import SectionHeader from '../Components/layouts/SectionHeader'
 
 const ShopCategory = (props) => {
   const {all_product} = useContext(ShopContext);
-  const filteredProduct = all_product.filter((item)=>{
-    if(props.category===item.category) return item
-  })
+  const filteredProduct = all_product.filter((item)=> (props.category===item.category))
 
   return (
     <div className='shop-category'>
