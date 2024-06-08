@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import hand_icon from '../Assets 3/hand_icon.png'
 import "./Hero.css"
 import {MoveRight} from "lucide-react"
