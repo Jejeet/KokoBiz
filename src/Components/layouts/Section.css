@@ -1,7 +1,9 @@
 .section{
-    max-width: 100%;
+    max-width: 80%;
     margin-inline:auto;
     margin-bottom: 150px;
-    padding: 10px;
+    /* padding-block: 10px;
+    padding-inline: 180px; */
     
 }
+
