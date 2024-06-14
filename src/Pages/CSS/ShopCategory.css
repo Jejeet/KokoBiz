@@ -1,7 +1,10 @@
 .shopcategory-banner{
     display: block;
-    margin: 30px;
-    width: 82%;
+    /* margin: 30px; */
+    /* width: 82%; */
+}
+.shopcategory-banner{
+
 }
 .shopcategory-indexSort{
     display: flex;
