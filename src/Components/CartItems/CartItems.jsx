@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import { ShopContext } from '../../Context/ShopContext'
 import "./CartItems.css"
-import remove_icon from "../Assets 3/cart_cross_icon.png"
+import { X } from "lucide-react"
+
 
 
 const CartItems = () => {
@@ -28,7 +29,10 @@ const CartItems = () => {
           <p>${e.new_price}</p>
           <button className='cartitems-quantity'>{cartItems[e.id]}</button>
           <p>${e.new_price*cartItems[e.id]}</p>
-          <img className='cartitems-remove-icon' src={remove_icon} onClick={()=>{removeFromCart(e.id)}} alt="" />
+          < X     onClick={()=>{removeFromCart(e.id)}}/>
+          {/* <span className='cartitems-remove-icon'  onClick={()=>{removeFromCart(e.id)}} alt="" >
+          
+          </span> */}
         </div>
         <hr />
       </div>
