@@ -15,14 +15,9 @@ const Navbar = () => {
   const [menu, setMenu] = useState("shop");
   const {getTotalItems}= useContext(ShopContext);
   const navMenuRef = useRef()
-
-
-
   const handleShowMenu = ()=>{
     navMenuRef.current.classList.toggle("show")
-    
   }
-
   const hideNavbarOnClickOnModal = ()=>{
       navMenuRef.current.classList.remove("show")
      
@@ -31,6 +26,7 @@ const Navbar = () => {
 
   return(
     <div className='navbar'>
+
         <div className="nav-logo">
             <img src={logo} alt="" />
             <p>KOKO_GARB</p>
@@ -75,6 +71,7 @@ const Navbar = () => {
      
 
     </div>
+   
    
   )
 }
