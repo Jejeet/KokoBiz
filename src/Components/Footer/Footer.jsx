@@ -1,8 +1,8 @@
 import React from 'react'
 import './Footer.css'
 import footer_logo from "../Assets 3/logo_big.png"
-import instagram_icon from "../Assets 3/instagram_icon.png"
-import whatsapp_icon from "../Assets 3/whatsapp_icon.png"
+import {Instagram, Facebook} from "lucide-react"
+
 
 const Footer = () => {
   return (
@@ -20,10 +20,10 @@ const Footer = () => {
         </ul>
         <div className="footer-social-icons">
             <div className="footer-icons-container">
-                <img src={instagram_icon} alt="" />
+               <Instagram />
             </div>
             <div className="footer-icons-container">
-                <img src={whatsapp_icon} alt="" />
+               <Facebook/>
             </div>
         </div>
         <div className="footer-copyright">
