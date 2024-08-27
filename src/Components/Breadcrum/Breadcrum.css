@@ -1,10 +1,18 @@
-.breadcrum{
+.breadcrum {
     display: flex;
-    align-items:center ;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    align-items: center;
     gap: 8px;
     color: #5e5e5e;
     font-size: 16px;
-    font-weight:600;
-    margin:60px 170px ;
+    font-weight: 600;
+    margin: 20px 10px; /* Reduced margin for smaller screens */
     text-transform: capitalize;
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+@media screen and (min-width: 768px) {
+    .breadcrum {
+        margin: 60px 170px; /* Larger margin for bigger screens */
+    }
 }
