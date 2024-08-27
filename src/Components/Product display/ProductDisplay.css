@@ -22,7 +22,7 @@
 .productdisplay-img-list img {
     width: 100%;
     max-height: 180px;
-    object-fit: contain;
+    object-fit: fill;
 }
 
 .productdisplay-main-img {
