@@ -1,29 +1,37 @@
+.offer-bg{
+    background: linear-gradient(180deg,#fde1ff,#e1ffea22 60%) ;
+}
+
 .offers{
     /* width: 100%; */
     height: 60vh;
     display: flex;
-    margin: auto;
-    padding:0px 140px ;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom:150px ;
-    background: linear-gradient(180deg,#fde1ff,#e1ffea22 60%) ;
+
+    
 }
 .offers-left{
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 25px;
 }
 .offers-left h1{
     color: #171717;
     font-size: 80px;
     font-weight: 600;
+    line-height: 1.2;
 }
 .offers-left p{
     color: #171717;
     font-size: 22px;
     font-weight: 600;
 }
-.offers-left button{
+/* .offers-left button{
     width: 282px;
     height: 70px;
     border: none;
@@ -34,11 +42,68 @@
     font-weight: 500;
     margin-top: 30px;
     cursor: pointer;
-}
+} */
 .offer-right{
-    flex: 1;
+    
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-top: 50px;
 }
+@media screen and (max-width: 1024px) {
+    .offers-left h1 {
+      font-size: 60px; /* Adjusted for medium screens */
+    }
+  
+    .offers-left p {
+      font-size: 18px;
+    }
+  
+    .offers {
+      height: auto; /* Adjust height for better fit */
+      margin-bottom: 100px; /* Reduced margin */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .offers {
+      flex-direction: column;
+      align-items: center;
+      text-align: center; /* Center-align text on smaller screens */
+    }
+  
+    .offers-left {
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .offers-left h1 {
+      font-size: 50px;
+    }
+  
+    .offers-left p {
+      font-size: 18px;
+    }
+  
+    .offer-right img {
+      width: 80%; /* Adjust image size for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .offers-left h1 {
+      font-size: 40px; /* Further reduce font size for mobile */
+    }
+  
+    .offers-left p {
+      font-size: 16px;
+    }
+  
+    .offer-right img {
+      width: 100%; /* Full width image for mobile */
+    }
+  
+    .offers {
+      margin-bottom: 50px; /* Further reduced margin */
+    }
+  }

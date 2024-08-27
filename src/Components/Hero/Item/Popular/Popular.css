@@ -3,12 +3,14 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    padding: 0 20px;
    
 }
 .popular h1{
     color: #171717;
     font-size: 50px;
     font-weight: 600;
+    text-align: center;
 }
 .popular hr{
     width: 200px;
@@ -21,3 +23,18 @@
     display: flex;
     gap: 30px;
 }
+@media screen and (max-width: 769px) {
+    .popular h1 {
+      font-size: 30px; /* Reduced font size for mobile */
+    }
+  
+    .popular hr {
+      width: 150px; /* Reduced the width of the horizontal line */
+    }
+  
+    .popular_item {
+      flex-direction: column; /* Stack items vertically */
+      gap: 20px; /* Reduced gap between items */
+      align-items: center; /* Center items on mobile */
+    }
+  }

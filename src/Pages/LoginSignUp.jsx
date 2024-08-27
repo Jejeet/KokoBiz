@@ -1,23 +1,37 @@
 import React from 'react'
+import Button from '../Components/Button/Button'
 import './CSS/LoginSignup.css'
+import {useForm} from "react-hook-form"
+import { DevTool } from '@hookform/devtools'
 
 const LoginSignUp = () => {
+ const form = useForm()
+ const{register,control,handleSubmit} = form;
+
+const onSubmit =()=>{
+
+}
+
   return (
     <div className='loginsignup'>
-      <div className="loginsignup-container">
+      <form className="loginsignup-container" onSubmit={handleSubmit(onSubmit)}>
         <h1>Sign Up</h1>
         <div className="loginsignup-fields">
-          <input type="text" placeholder='Your Name' />
-          <input type="email" placeholder='enter your email address' />
-          <input type="password"  placeholder='Password'/>
+          <input type="text" placeholder='Your Name' {...register('username')}  />
+          <input type="email" placeholder='enter your email address' {...register('email')}/>
+          <input type="password"  placeholder='Password' {...register('password')}/>
         </div>
-        <button>Continue</button>
+        <Button size="medium" type='submit'>Continue</Button>
+      
         <p className="loginsignup-login"> Already have an account? <span>Login here</span></p>
         <div className="loginsignup-agree">
-          <input type="checkbox" name='' id='' />
-          <p>By continuing, I agree to the terms of use & privacy policy.</p>
+         <span className='check'></span>
+          <input type="checkbox" name='checkbox' id='' {...register('checkbox')}/>
+          <label>By continuing, I agree to the terms of use & privacy policy.</label>
+         
         </div>
-      </div>
+      </form>
+      <DevTool control={control}/>
     </div>
   )
 }

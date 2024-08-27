@@ -9,4 +9,26 @@
     align-items: center;
     
 }
-
+@media screen and (max-width: 1024px) {
+    .products {
+      grid-template-columns: 1fr 1fr 1fr; /* Adjust to 3 columns for medium screens */
+      column-gap: 15px;
+      row-gap: 25px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .products {
+      grid-template-columns: 1fr 1fr; /* Adjust to 2 columns for tablets */
+      column-gap: 20px;
+      row-gap: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .products {
+      grid-template-columns: 1fr; /* Stack items in a single column for mobile */
+      column-gap: 0;
+      row-gap: 20px;
+    }
+  }

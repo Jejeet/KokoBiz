@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../../Context/ShopContext'
 import "./CartItems.css"
 import { X } from "lucide-react"
+import Button from '../Button/Button'
 
 
 
@@ -12,13 +13,13 @@ const CartItems = () => {
     <div className='cartitems'>
       <div className="cartitems-format-main">
         <p>Products</p>
-        <p>Title</p>
+        <p className='product-title'>Title</p>
         <p>Price</p>
         <p>Quantity</p>
         <p>Total</p>
         <p>Remove</p>
       </div>
-      <hr />
+      {/* <hr /> */}
       {all_product.map((e) =>{
         if(cartItems[e.id]>0)
 {
@@ -59,13 +60,13 @@ const CartItems = () => {
           <h3>${getTotalCartAmount()}</h3>
             </div>
           </div>
-          <button>PROCEED TO CHECKOUT</button>
+          <Button size='medium'>PROCEED TO CHECKOUT</Button>
         </div>
         <div className="cartitems-promocode">
           <p>If you have promo code,Enter it here</p>
           <div className="cartitems-promobox">
             <input type="text" placeholder='promocode'/>
-            <button>Submit</button>
+            <Button size='small'>Submit</Button>
           </div>
         </div>
       </div>

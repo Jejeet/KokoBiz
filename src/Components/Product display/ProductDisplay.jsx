@@ -4,6 +4,7 @@ import "./ProductDisplay.css"
 import { useContext } from 'react'
 import { ShopContext } from '../../Context/ShopContext'
 import { Star, StarOff } from 'lucide-react'
+import Button from '../Button/Button'
 
 const ProductDisplay = (props) => {
     const {product} = props;
@@ -42,16 +43,20 @@ const ProductDisplay = (props) => {
             <div className="productdiplay-right-size">
                 <h1>Select size</h1>
                 <div className="productdiplay-right-sizes">
-                    <div>S</div>
-                    <div>M</div>
-                    <div>L</div>
-                    <div>XL</div>
-                    <div>XXL</div>
+                    <Button variant='secondary' size='small'>S</Button>
+                    <Button variant='secondary' size='small'>M</Button>
+                    <Button variant='secondary' size='small'>L</Button>
+                    <Button variant='secondary' size='small'>XL</Button>
+                    <Button variant='secondary' size='small'>XXL</Button>
                 </div>
             </div>
-            <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
+            
+            <div className='add-to-cart'>
+            <Button onClick={()=>{addToCart(product.id)}}>ADD TO CART</Button>
+            </div>
             <p className="productdisplay-right-category"><span>Category :</span> Women, T-shirt,Crop Top</p>
             <p className="productdisplay-right-category"><span>Tag :</span> Modern, Latest</p>
+            
         </div>
     </div>
   )

@@ -6,8 +6,8 @@ const Breadcrum = (props) => {
   return (
     <div className='breadcrum'>
         HOME  <ChevronRight />
-         SHOP 
-         {product.categorey} <ChevronRight /> {product.name}
+         SHOP  <ChevronRight />
+         {product.category} <ChevronRight /> {product.name}
     </div>
   )
 }
