@@ -10,56 +10,53 @@ const CartItems = () => {
   //access the data and functtin through contextAPI
   const {getTotalCartAmount,all_product,cartItems,removeFromCart}= useContext(ShopContext)
   return (
-    <div className='cartitems'>
-      <div className="cartitems-format-main">
-        <p>Products</p>
-        <p className='product-title'>Title</p>
-        <p>Price</p>
-        <p>Quantity</p>
-        <p>Total</p>
-        <p>Remove</p>
-      </div>
-      {/* <hr /> */}
-      {all_product.map((e) =>{
-        if(cartItems[e.id]>0)
-{
-           return <div>
-        <div className="classitems-format cartitems-format-main">
-          <img src={e.image} alt="" className='carticon-product-icon'/>
-          <p>{e.name}</p>
-          <p>${e.new_price}</p>
-          <button className='cartitems-quantity'>{cartItems[e.id]}</button>
-          <p>${e.new_price*cartItems[e.id]}</p>
-          < X     onClick={()=>{removeFromCart(e.id)}}/>
-          {/* <span className='cartitems-remove-icon'  onClick={()=>{removeFromCart(e.id)}} alt="" >
-          
-          </span> */}
-        </div>
-        <hr />
-      </div>
-        } 
+    <div className='cartitems' >
+     <div> 
+      <table>
+        <tr className="cartitems-format-main">
+          <th>Products</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Remove</th>
+        </tr>
+        {all_product.map((e)=>{
+          if (cartItems[e.id]>0){
+            return <tr className=" cartitems-format-main">
+            <td><img src={e.image} alt="" className='carticon-product-icon'/></td>
+            <td>{e.name}</td>
+            <td>${e.new_price}</td>
+            <td> <button className='cartitems-quantity'>{cartItems[e.id]}</button></td>
+            <td>${e.new_price*cartItems[e.id]}</td>
+            <td>< X     onClick={()=>{removeFromCart(e.id)}}/></td>
+          </tr>
+          }
           return null;
+        })}
         
-      })}
+      </table>
+      </div>
+      
       <div className="cartitems-down">
         <div className="cartitems-total">
-          <h1>Cart Totals</h1>
-          <div>
-            <div className="cartitems-total-item">
-              <p>Sub-Total</p>
-              <p>${getTotalCartAmount()}</p>
-            </div>
+          <h3>Order Summary</h3>
+          <table>
+            <tr className="cartitems-total-item">
+              <td>Sub-Total</td>
+              <td>${getTotalCartAmount()}</td>
+            </tr>
             <hr />
-            <div className="cartitems-total-item">
-              <p>Shipping Fee</p>
-              <p>Free</p>
-            </div>
+            <tr className="cartitems-total-item">
+              <td>Shipping Fee</td>
+              <td>Free</td>
+            </tr>
             <hr />
-            <div className="cartitems-total-item">
-              <h3>Total</h3>
-          <h3>${getTotalCartAmount()}</h3>
-            </div>
-          </div>
+            <tr className="cartitems-total-item">
+             <td> <h3>Total</h3></td>
+          <td><h3>${getTotalCartAmount()}</h3> </td>
+            </tr>
+          </table>
           <Button size='medium'>PROCEED TO CHECKOUT</Button>
         </div>
         <div className="cartitems-promocode">
@@ -69,7 +66,8 @@ const CartItems = () => {
             <Button size='small'>Submit</Button>
           </div>
         </div>
-      </div>
+      </div> 
+      
     </div>
   )
 }

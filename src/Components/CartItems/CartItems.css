@@ -1,102 +1,155 @@
-.cartitems{
-    margin: 100px 170px;
+.cartitems {
+  margin: 100px 170px;
+  display: flex;
+  gap: 50px;
+  
 }
-.cartitems hr{
-    height: 6px;
-    border: 0;
-    background: #e2e2e2;
-}
-.cartitems-format-main{
+
+.cartitems-format-main {
     border-bottom: 4px solid #454545;
     width: 100%;
-    font-size:18px ;
-    font-weight: 600;
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-     justify-items: right;
-    padding:20px 0px ;
-    gap: 75px;
-    color: #454545;
-}
-.classitems-format{
-    font-size: 17px;
+    font-size:17px ;
     font-weight: 500;
-    
-}
-.carticon-product-icon{
-    height: 62px;
-}
-.cartitems-remove-icon{
-    width: 15px;
-    margin: 0px 40px;
-    cursor: pointer;
-}
-.cartitems-quantity{
-    width: 64px;
-    height: 50px;
-    border: 2px solid #ebebeb ;
-    background: #fff;
-}
-.cartitems-down{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 3fr 5fr 1fr 1.5fr 1.5fr 1.5fr;
+    align-items: center;
+    /* justify-items: right; */
+    /* padding:20px 0px ; */
+    gap: 75px;
    
-    margin-block: 50px;
-    /* margin: 100px 0px; */
-}
-.cartitems-total{
+   /* grid-auto-flow: column; /* Arrange items in a single row */
+   /* overflow-x: auto; Enable horizontal scrolling */ 
 
-    display: flex;
-    flex-direction: column;
-    flex-basis: 45%;
-    
-    margin-right:200px ;
-    gap: 40px;
 }
-.cartitems-total-item{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0px;
+/* .classitems-format {
+  font-size: 17px;
+  font-weight: 500;
+} */
+.carticon-product-icon {
+  height: 62px;
 }
-/* .cartitems-total button{
+.cartitems-remove-icon {
+  width: 15px;
+  margin: 0px 40px;
+  cursor: pointer;
+}
+.cartitems-quantity {
+  width: 64px;
+  height: 50px;
+  border: 2px solid #ebebeb;
+  background: #fff;
+}
+.cartitems-down {
+ margin-block: 50px;
+}
+.cartitems-total {
+  display: flex;
+  flex-direction: column;
+ 
+}
+.cartitems-total-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px;
+}
+.cartitems-total button{
     width: 260px;
     height: 60px;
     outline: none;
     border: none;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     color:#fff;
     background: #ff5a5a;
     
-} */
-.cartitems-promocode{
-   
-    font-size: 16px;
-    font-weight: 500;
 }
-.cartitems-promocode p{
-    color: #555;
-}
-.cartitems-promobox{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 10px;
-    border-radius: 75px;
-    margin-top: 15px;
-   
-    padding-block: 10px;
-    height: 58px;
-    background: #eaeaea;
-}
-.cartitems-promobox input{
-    border: none;outline: none;
-    background: transparent;
-    font-size: 16px;
-    /* width: 330px;
-    height: 50px; */
-}
-    
-   
+.cartitems-promocode {
+  font-size: 16px;
+  font-weight: 500;
 
+}
+.cartitems-promocode p {
+  color: #555;
+}
+.cartitems-promobox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 10px;
+  border-radius: 75px;
+  margin-top: 15px;
+  padding-block: 10px;
+  height: 58px;
+  background: #eaeaea;
+}
+.cartitems-promobox input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+
+}
+
+
+/* @media screen and (max-width: 1024px) {
+  .cartitems {
+    margin: 100px 50px;
+    overflow-x: auto;
+  }
+
+  .cartitems-format-main {
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    gap: 50px;
+    font-size: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .cartitems-total {
+    margin-right: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cartitems {
+    margin: 50px 20px;
+    overflow-x: auto;
+  }
+
+  .cartitems-format-main {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .cartitems-total {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .cartitems-down {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cartitems-promobox {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .cartitems-promobox input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cartitems {
+    margin: 30px 10px;
+    overflow-x: auto; 
+  }
+  
+} */
+ 
