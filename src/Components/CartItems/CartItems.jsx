@@ -11,7 +11,7 @@ const CartItems = () => {
   const {getTotalCartAmount,all_product,cartItems,removeFromCart}= useContext(ShopContext)
   return (
     <div className='cartitems' >
-     <div> 
+     <div className="cartitems-table-container"> 
       <table>
         <tr className="cartitems-format-main">
           <th>Products</th>

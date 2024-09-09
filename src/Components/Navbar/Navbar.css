@@ -111,6 +111,100 @@ body {
     width: 30px;
     height: 30px;
 }
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding-inline: 50px;
+    }
+
+    .nav-list {
+        gap: 30px;
+    }
+
+    .nav-login-cart {
+        gap: 30px;
+    }
+}
+
+/* For screen size 820px */
+@media screen and (max-width: 820px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 30px;
+    }
+
+    .nav-logo img {
+        width: 35px;
+    }
+
+    .nav-logo p {
+        font-size: 24px;
+    }
+
+    .nav_menu {
+        display: none; /* Initially hide the menu for smaller screens */
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.179);
+        z-index: 100;
+    }
+
+    .nav_menu.show {
+        display: block; /* Show the menu when triggered by the hamburger icon */
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 50px 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 260px;
+        background-color: rgb(155, 44, 44);
+        margin: 0;
+        overflow-y: auto;
+    }
+
+    .nav-login-cart {
+        gap: 25px;
+    }
+
+    .nav-login-cart button {
+        width: 80px;
+        height: 30px;
+        outline: none;
+        border: 1px solid #7a7a7a;
+        border-radius: 75px;
+        color: #515151;
+        font-size: 14px;
+        font-weight: 300;
+        background: white;
+        cursor: pointer;
+    }
+
+    .cartBag {
+        width: 28px;
+        height: 28px;
+    }
+
+    .nav-cart-count {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    .navMedia {
+        display: block;
+    }
+}
+
 
 @media screen and (max-width: 769px) {
     .navbar {
