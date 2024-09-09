@@ -125,12 +125,16 @@
 
   .cartitems-promobox {
     flex-direction: column;
-    height: auto;
+    /* height: auto; */
     gap: 10px;
   }
 
   .cartitems-promobox input {
     width: 100%;
+    
+  }
+  .cartitems-promobox button{
+    margin-top: 2.25rem;
   }
 }
 
@@ -149,10 +153,13 @@
   .cartitems-promobox {
     flex-direction: column;
     padding: 10px;
-    height: auto;
+    /* height: auto; */
   }
 
   .cartitems-promobox input {
     font-size: 12px;
+  }
+  .cartitems-promobox button{
+    margin-top: 2.25rem;
   }
 }
