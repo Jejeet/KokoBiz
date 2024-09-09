@@ -27,10 +27,12 @@ const Navbar = () => {
   return(
     <div className='navbar'>
 
+<Link style={{textDecoration:'none'}}  to = '/'>
         <div className="nav-logo">
             <img src={logo} alt="" />
-            <p>KOKO_GARB</p>
+            <p>KOKO_GARB </p>
         </div>
+        </Link>
        
        
         <div ref={navMenuRef} className={`nav_menu`} onClick={hideNavbarOnClickOnModal}>
